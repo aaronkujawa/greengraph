@@ -1,2 +1,2 @@
-import Greengraph
-import Map
+from .Greengraph import Greengraph
+from .Map import Map
