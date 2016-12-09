@@ -1,3 +1,12 @@
+import geopy
+import numpy as np
+
+import sys
+
+import greengraph
+print ('greengraph folder')
+print (greengraph.__file__)
+
 class Greengraph(object):
     def __init__(self, start, end):
         self.start=start
@@ -13,5 +22,4 @@ class Greengraph(object):
         return np.vstack([lats, longs]).transpose()
 
     def green_between(self, steps):
-        return [Map(*location).count_green() for location in self.location_sequence( self.geolocate(self.start),
-                                                        self.geolocate(self.end), steps)]
+        return [greengraph.Map(*location).count_green() for location in self.location_sequence( self.geolocate(self.start), self.geolocate(self.end), steps)]

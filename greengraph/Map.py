@@ -1,3 +1,14 @@
+print('HEEEEEREEE')
+import requests
+import numpy as np
+from matplotlib import image as img
+import io
+
+import sys
+sys.path.append('/Users/aaron/Dropbox/PhD/Advance_Elective/Python_Programming_For_Research/Greengraph')
+
+import greengraph
+
 class Map(object):
     def __init__(self, lat, long, satellite=True, zoom=10, size=(400,400), sensor=False):
         base="http://maps.googleapis.com/maps/api/staticmap?"
