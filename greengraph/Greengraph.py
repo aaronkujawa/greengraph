@@ -1,8 +1,6 @@
 import geopy
 import numpy as np
 
-import sys
-
 import greengraph
 print ('greengraph folder')
 print (greengraph.__file__)

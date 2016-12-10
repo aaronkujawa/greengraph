@@ -1,4 +1,3 @@
-print('HEEEEEREEE')
 import requests
 import numpy as np
 from matplotlib import image as img
