@@ -8,13 +8,13 @@ def process():
    parser.add_argument('--frm', '-f')
    parser.add_argument('--to', '-t')
    parser.add_argument('--steps', '-s')
-   #parser.add_argument('--out', 'o')
+   parser.add_argument('--out', '-o')
    arguments = parser.parse_args()
 
    mygraph = greengraph.Greengraph(arguments.frm ,arguments.to)
    data = mygraph.green_between(arguments.steps)
    plt.plot(data)
-   plt.show()
+   plt.savefig(arguments.out)
 
 if __name__ == "__main__":
     process()
