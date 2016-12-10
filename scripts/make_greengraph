@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+import greengraph
+from greengraph.command import process
+process()
