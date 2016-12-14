@@ -14,7 +14,18 @@ class Greengraph(object):
     def geolocate(self, place):
         return self.geocoder.geocode(place, exactly_one=False)[0][1]
 
-    def location_sequence(self, start,end,steps):
+    def location_sequence(self, start, end, steps):
+
+        # test if "steps" can be converted to integer
+        try:
+            steps = int(steps)
+        except:
+            raise TypeError('The argument "steps" has to be an integer.')
+
+        # test if "steps" is positive
+        if steps < 2:
+            raise ValueError('The argument "steps" has to be at least 2.')
+
         lats = np.linspace(start[0], end[0], steps)
         longs = np.linspace(start[1],end[1], steps)
         return np.vstack([lats, longs]).transpose()

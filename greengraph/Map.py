@@ -3,9 +3,6 @@ import numpy as np
 from matplotlib import image as img
 import io
 
-import sys
-sys.path.append('/Users/aaron/Dropbox/PhD/Advance_Elective/Python_Programming_For_Research/Greengraph')
-
 import greengraph
 
 class Map(object):
