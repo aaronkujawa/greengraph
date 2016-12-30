@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-import greengraph
+import greengraph_module
 import matplotlib.pyplot as plt
 
 def process():
@@ -11,7 +11,7 @@ def process():
    parser.add_argument('--out', '-o', required=True)
    arguments = parser.parse_args()
 
-   mygraph = greengraph.Greengraph(arguments.frm ,arguments.to)
+   mygraph = greengraph_module.Greengraph(arguments.frm ,arguments.to)
    data = mygraph.green_between(arguments.steps)
    plt.plot(data)
    plt.savefig(arguments.out)

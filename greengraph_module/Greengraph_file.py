@@ -1,9 +1,9 @@
 import geopy
 import numpy as np
 
-import greengraph
-print ('greengraph folder')
-print (greengraph.__file__)
+import greengraph_module
+print ('greengraph_module folder')
+print (greengraph_module.__file__)
 
 class Greengraph(object):
     def __init__(self, start, end):
@@ -31,5 +31,5 @@ class Greengraph(object):
         return np.vstack([lats, longs]).transpose()
 
     def green_between(self, steps):
-        return [greengraph.Map(*location).count_green() for location in self.location_sequence(
+        return [greengraph_module.Map(*location).count_green() for location in self.location_sequence(
         self.geolocate(self.start), self.geolocate(self.end), steps)]
