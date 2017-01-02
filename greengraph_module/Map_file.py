@@ -20,7 +20,7 @@ class Map(object):
             params["maptype"]="satellite"
         self.image = requests.get(base, params=params).content
         # Fetch our PNG image data
-        self.pixels= img.imread(io.BytesIO(self.image))
+        self.pixels = img.imread(io.BytesIO(self.image))
         # Parse our PNG image as a numpy array
 
     def green(self, threshold):
@@ -33,9 +33,9 @@ class Map(object):
     def count_green(self, threshold = 1.1):
         return np.sum(self.green(threshold))
 
-    def show_green(data, threshold = 1.1):
+    def show_green(self, threshold = 1.1):
         green = self.green(threshold)
-        out = green[:,:,np.newaxis]*array([0,1,0])[np.newaxis,np.newaxis,:]
-        buffer = StringIO()
+        out = green[:,:,np.newaxis]*np.array([0,1,0])[np.newaxis,np.newaxis,:]
+        buffer = io.BytesIO()
         result = img.imsave(buffer, out, format='png')
         return buffer.getvalue()
