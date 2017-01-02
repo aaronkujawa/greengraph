@@ -10,5 +10,5 @@ To install the program use the following command:
 **Usage:**
 
 ```
-greengraph [--frm FIRST_CITY] [--to SECOND_CITY] [--steps STEPS] [--out OUT_PATH]
+make_greengraph [--frm FIRST_CITY] [--to SECOND_CITY] [--steps STEPS] [--out OUT_PATH]
 ```
