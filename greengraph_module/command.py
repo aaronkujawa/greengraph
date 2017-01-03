@@ -7,7 +7,7 @@ def process():
                     the amount of green pixels between two locations. ")
    parser.add_argument('--frm', '-f', required=True)
    parser.add_argument('--to', '-t', required=True)
-   parser.add_argument('--steps', '-s', required=True)
+   parser.add_argument('--steps', '-s', required=True, type = int)
    parser.add_argument('--out', '-o', required=True)
    arguments = parser.parse_args()
 
