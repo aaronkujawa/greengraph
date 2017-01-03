@@ -10,9 +10,11 @@ from itertools import chain
 import requests
 from matplotlib import image as img
 
+# load the fixtures file
 script_dir = os.path.dirname(__file__)
 fixtures = yaml.load(open(os.path.join(script_dir, 'fixtures/greengraph_fixtures.yaml')))
 
+# extract fixtures for the geolocate function
 geolocate_fixtures = fixtures['geolocate']
 
 # define a function that can be used as a mock for the geocode function to avoid

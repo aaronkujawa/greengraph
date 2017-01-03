@@ -9,6 +9,7 @@ class Greengraph(object):
         self.end=end
         self.geocoder=geopy.geocoders.GoogleV3(domain="maps.google.co.uk")
 
+    # function to test the validity of the steps parameter
     def steps_test(self, steps):
             # test if "steps" is an integer
             if (isinstance( steps, int )) == 0:
